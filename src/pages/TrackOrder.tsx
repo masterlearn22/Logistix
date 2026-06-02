@@ -166,22 +166,22 @@ export const TrackOrder: React.FC = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
                 
                 {/* Left Column: Shipment Details */}
-                <div className="lg:col-span-1 space-y-6">
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 h-full">
-                    <h3 className="text-xl font-heading font-bold mb-6 flex items-center border-b pb-4">
-                      <FileText className="w-5 h-5 mr-3 text-amber-500" /> Shipment Details
-                    </h3>
-                    
-                    <div className="space-y-6">
+                <div className="lg:col-span-1 bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 flex flex-col">
+                  <h3 className="text-xl font-heading font-bold mb-6 flex items-center border-b pb-4">
+                    <FileText className="w-5 h-5 mr-3 text-amber-500" /> Shipment Details
+                  </h3>
+                  
+                  <div className="space-y-6 flex-grow flex flex-col justify-between">
+                    <div>
                       <div>
                         <p className="text-sm text-gray-400 font-medium mb-1">From</p>
                         <p className="font-bold text-gray-800">{mockData.sender}</p>
                       </div>
                       
-                      <div className="flex items-center py-2">
+                      <div className="flex items-center py-4">
                         <div className="h-[1px] w-full bg-gray-200"></div>
                         <Plane className="w-5 h-5 text-gray-400 mx-4" />
                         <div className="h-[1px] w-full bg-gray-200"></div>
@@ -191,24 +191,27 @@ export const TrackOrder: React.FC = () => {
                         <p className="text-sm text-gray-400 font-medium mb-1">To</p>
                         <p className="font-bold text-gray-800">{mockData.receiver}</p>
                       </div>
+                    </div>
 
-                      <div className="bg-gray-50 rounded-2xl p-4 mt-6 grid grid-cols-2 gap-4">
-                        <div>
-                          <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Service</p>
-                          <p className="font-bold text-sm">{mockData.service}</p>
-                        </div>
-                        <div>
-                          <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Weight</p>
-                          <p className="font-bold text-sm">{mockData.weight}</p>
-                        </div>
+                    <div className="bg-gray-50 rounded-2xl p-4 md:p-6 mt-6 grid grid-cols-2 gap-y-6 gap-x-4">
+                      <div>
+                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Service</p>
+                        <p className="font-bold text-sm">{mockData.service}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Weight</p>
+                        <p className="font-bold text-sm">{mockData.weight}</p>
+                      </div>
+                      <div className="col-span-2">
+                        <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Dimensions</p>
+                        <p className="font-bold text-sm">{mockData.dimensions}</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Column: Interactive Timeline */}
-                <div className="lg:col-span-2">
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 h-full">
+                <div className="lg:col-span-2 bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 flex flex-col">
                     <h3 className="text-xl font-heading font-bold mb-8 flex items-center">
                       <Clock className="w-5 h-5 mr-3 text-amber-500" /> Live Tracking Progress
                     </h3>
@@ -260,7 +263,6 @@ export const TrackOrder: React.FC = () => {
                           );
                         })}
                       </div>
-                    </div>
                   </div>
                 </div>
 
