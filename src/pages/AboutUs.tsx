@@ -14,7 +14,7 @@ const projects = [
     id: 2,
     title: "Operation Cold Chain: Global Health",
     category: "Pharma & Perishables",
-    image: "https://images.unsplash.com/photo-1587293852726-0e19036c01ed?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1584308666744-2458b68832a8?auto=format&fit=crop&q=80&w=1200",
     desc: "In response to a global health crisis, Logistix mobilized its IoT-enabled active cooling fleet to deliver 10 million critical vaccines across 15 countries maintaining strict 2°C to 8°C temperatures without a single excursion."
   },
   {
