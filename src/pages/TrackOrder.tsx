@@ -76,24 +76,26 @@ export const TrackOrder: React.FC = () => {
               Enter your tracking number below to get real-time simulated updates on your cargo's journey.
             </p>
 
-            <form onSubmit={handleSearch} className="relative flex items-center max-w-2xl mx-auto">
-              <div className="absolute left-6 text-gray-400">
-                <Search className="w-6 h-6" />
+            <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
+              <div className="relative flex-1">
+                <div className="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none text-gray-400">
+                  <Search className="w-6 h-6" />
+                </div>
+                <input 
+                  type="text" 
+                  value={trackingId}
+                  onChange={(e) => setTrackingId(e.target.value)}
+                  placeholder="e.g. TRK-123456789" 
+                  className="w-full bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl py-5 pl-16 pr-6 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all font-mono text-lg tracking-wider uppercase"
+                  required
+                />
               </div>
-              <input 
-                type="text" 
-                value={trackingId}
-                onChange={(e) => setTrackingId(e.target.value)}
-                placeholder="e.g. TRK-123456789" 
-                className="w-full bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl py-5 pl-16 pr-40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all font-mono text-lg tracking-wider uppercase"
-                required
-              />
               <button 
                 type="submit"
                 disabled={status === 'searching'}
-                className="absolute right-3 bg-amber-500 hover:bg-amber-400 text-brand-dark px-6 py-3 rounded-xl font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+                className="bg-amber-500 hover:bg-amber-400 text-brand-dark px-10 py-5 rounded-2xl font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center whitespace-nowrap"
               >
-                {status === 'searching' ? 'Searching...' : 'Track'}
+                {status === 'searching' ? 'Searching...' : 'Track Order'}
               </button>
             </form>
           </motion.div>
@@ -144,7 +146,7 @@ export const TrackOrder: React.FC = () => {
                     </span>
                     <span className="text-gray-400 text-sm font-medium">Tracking ID:</span>
                   </div>
-                  <h2 className="text-3xl font-heading font-extrabold text-brand-dark font-mono">{mockData.id}</h2>
+                  <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-brand-dark font-mono break-all">{mockData.id}</h2>
                 </div>
                 
                 <div className="flex flex-col items-end gap-2 w-full md:w-auto">
@@ -240,7 +242,7 @@ export const TrackOrder: React.FC = () => {
                                 isPassed ? 'bg-amber-500 border-amber-200 text-white' : 
                                 isActive ? 'bg-white border-amber-500 text-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]' : 
                                 'bg-gray-50 border-gray-200 text-gray-400'
-                              } transition-all duration-300 mr-6 flex-shrink-0`}>
+                              } transition-all duration-300 mr-4 sm:mr-6 flex-shrink-0`}>
                                 <StepIcon className="w-5 h-5" />
                               </div>
 
@@ -293,16 +295,16 @@ export const TrackOrder: React.FC = () => {
               </div>
 
               {/* Receipt Body */}
-              <div className="p-8 pb-12 relative">
+              <div className="p-6 sm:p-8 pb-10 sm:pb-12 relative overflow-hidden">
                 {/* Fake Stamp */}
-                <div className="absolute right-12 bottom-24 border-4 border-red-500/30 text-red-500/30 rounded-full w-32 h-32 flex items-center justify-center transform -rotate-12 pointer-events-none">
+                <div className="absolute right-4 bottom-24 sm:right-12 sm:bottom-24 border-4 border-red-500/30 text-red-500/30 rounded-full w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center transform -rotate-12 pointer-events-none">
                   <div className="text-center">
-                    <p className="font-bold text-lg leading-none border-t-2 border-b-2 border-red-500/30 py-1 mb-1">DELIVERED</p>
-                    <p className="text-[10px] font-mono">{mockData.steps[4]?.date}</p>
+                    <p className="font-bold text-sm sm:text-lg leading-none border-t-2 border-b-2 border-red-500/30 py-1 mb-1">DELIVERED</p>
+                    <p className="text-[8px] sm:text-[10px] font-mono">{mockData.steps[4]?.date}</p>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-y-6 border-b border-gray-100 pb-8 mb-8 text-sm">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 border-b border-gray-100 pb-8 mb-8 text-sm relative z-10">
                   <div>
                     <p className="text-gray-400 mb-1">Tracking Number</p>
                     <p className="font-mono font-bold text-lg text-brand-dark">{mockData.id}</p>
@@ -321,10 +323,10 @@ export const TrackOrder: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-end">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 relative z-10">
                   <div>
                     <p className="text-gray-400 mb-2 text-sm">Received By / Signature</p>
-                    <div className="font-[Shadows_Into_Light,cursive] text-4xl text-brand-dark opacity-80 -rotate-2">
+                    <div className="font-serif italic text-4xl text-brand-dark opacity-80 -rotate-2">
                       John Doe
                     </div>
                     <div className="h-[1px] w-48 bg-gray-300 mt-2"></div>
