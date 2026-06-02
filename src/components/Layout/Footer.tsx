@@ -11,21 +11,7 @@ export const Footer: React.FC = () => {
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
-        {/* Top CTA Section (Making it highly helpful) */}
-        <div className="flex flex-col md:flex-row items-center justify-between bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 mb-16 backdrop-blur-sm">
-          <div className="mb-6 md:mb-0 max-w-2xl">
-            <h3 className="text-3xl font-heading font-bold mb-2">Ready to streamline your global logistics?</h3>
-            <p className="text-gray-400 text-lg">Our experts are available 24/7 to provide customized routing and pricing.</p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-            <Link to="/contact" className="bg-amber-500 hover:bg-amber-400 text-[#0B132B] px-8 py-4 rounded-xl font-bold transition-all text-center flex items-center justify-center">
-              Request a Quote <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <a href="tel:+15551234567" className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold transition-all text-center border border-white/10 flex items-center justify-center">
-              <Phone className="w-5 h-5 mr-2" /> Call Now
-            </a>
-          </div>
-        </div>
+
 
         {/* Main Footer Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
