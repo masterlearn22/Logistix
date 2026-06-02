@@ -108,23 +108,29 @@ export const Contact: React.FC = () => {
       {/* Smart Department Routing */}
       <section className="py-20 px-6 relative z-20 -mt-16">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {departments.map((dept, index) => (
               <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-brand-dark/95 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-amber-500/50 transition-colors group text-white shadow-2xl"
+                className="bg-white rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group shadow-lg border border-gray-100 flex flex-col relative overflow-hidden"
               >
-                <div className="bg-white/5 p-4 rounded-2xl w-fit mb-6 group-hover:bg-amber-500/10 transition-colors">
+                {/* Decorative subtle background element */}
+                <div className="absolute -right-8 -top-8 w-32 h-32 bg-amber-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
+                
+                <div className="bg-amber-50 p-4 rounded-2xl w-fit mb-6 group-hover:bg-amber-100 transition-colors relative z-10">
                   {dept.icon}
                 </div>
-                <h3 className="text-2xl font-heading font-bold mb-3">{dept.title}</h3>
-                <p className="text-gray-400 mb-8 min-h-[60px]">{dept.desc}</p>
-                <a href={`mailto:${dept.email}`} className="inline-flex items-center text-amber-500 font-bold hover:text-amber-400 transition-colors group/link">
-                  {dept.action} <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
-                </a>
+                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-3 relative z-10">{dept.title}</h3>
+                <p className="text-brand-muted mb-8 min-h-[60px] leading-relaxed relative z-10">{dept.desc}</p>
+                
+                <div className="mt-auto pt-4 border-t border-gray-50 relative z-10">
+                  <a href={`mailto:${dept.email}`} className="inline-flex items-center text-brand-dark font-bold hover:text-amber-500 transition-colors group/link text-sm uppercase tracking-wide">
+                    {dept.action} <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                  </a>
+                </div>
               </motion.div>
             ))}
           </div>
