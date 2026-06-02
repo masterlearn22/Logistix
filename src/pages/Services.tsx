@@ -72,7 +72,7 @@ export const Services: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-10 w-full">
                 <Anchor className="w-12 h-12 text-amber-500 mb-4" />
-                <h3 className="text-3xl font-heading font-bold mb-3">Ocean Freight</h3>
+                <h3 className="text-3xl font-heading font-bold mb-3 text-white">Ocean Freight</h3>
                 <p className="text-gray-300 max-w-md mb-6">High-capacity global shipping with precision tracking. Ideal for massive volumes and cost-effective intercontinental transport.</p>
                 <div className="flex space-x-3">
                   <span className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold border border-white/20">FCL / LCL</span>
@@ -90,7 +90,7 @@ export const Services: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
                 <Plane className="w-10 h-10 text-amber-500 mb-4" />
-                <h3 className="text-2xl font-heading font-bold mb-3">Air Express</h3>
+                <h3 className="text-2xl font-heading font-bold mb-3 text-white">Air Express</h3>
                 <p className="text-gray-300 mb-6 text-sm">When time is critical. Guaranteed space allocations on global major airlines.</p>
                 <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-xs font-bold border border-amber-500/30">Next Flight Out</span>
               </div>
@@ -105,7 +105,7 @@ export const Services: React.FC = () => {
                 <Truck className="w-32 h-32" />
               </div>
               <div className="p-8 h-full flex flex-col justify-end">
-                <h3 className="text-2xl font-heading font-bold mb-3">Ground Network</h3>
+                <h3 className="text-2xl font-heading font-bold mb-3 text-brand-dark">Ground Network</h3>
                 <p className="text-brand-muted mb-6 text-sm">Seamless cross-border connectivity. Fleet equipped with real-time GPS and temperature monitors.</p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-bold text-gray-600">FTL/LTL</span>
@@ -121,7 +121,7 @@ export const Services: React.FC = () => {
             >
               <div className="w-full flex justify-between items-center z-10 relative">
                 <div>
-                  <h3 className="text-2xl font-heading font-bold mb-2">Customs & Compliance</h3>
+                  <h3 className="text-2xl font-heading font-bold mb-2 text-white">Customs & Compliance</h3>
                   <p className="text-gray-400 max-w-sm text-sm">Navigating global regulations effortlessly with our in-house licensed brokerage team.</p>
                 </div>
                 <button className="bg-amber-500 hover:bg-amber-400 text-brand-dark font-bold px-6 py-3 rounded-md transition-colors shadow-sm">Consult Expert</button>
