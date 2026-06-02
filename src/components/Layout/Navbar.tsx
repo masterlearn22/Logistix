@@ -70,9 +70,6 @@ export const Navbar: React.FC = () => {
 
         {/* Right Actions */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/contact" className="text-sm font-bold text-gray-300 hover:text-white transition-colors">
-            Client Portal
-          </Link>
           <button className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all">
             <span>Track Order</span>
             <ChevronRight className="w-4 h-4 text-amber-500" />
@@ -111,9 +108,6 @@ export const Navbar: React.FC = () => {
                 </Link>
               ))}
               <div className="pt-6 border-t border-white/10 flex flex-col space-y-4">
-                <Link to="/contact" className="text-lg font-bold text-gray-300 hover:text-white">
-                  Client Portal
-                </Link>
                 <button className="flex justify-center items-center space-x-2 bg-gradient-to-r from-amber-400 to-orange-500 text-brand-dark px-6 py-3 rounded-xl text-lg font-bold w-full shadow-[0_0_15px_rgba(245,158,11,0.4)]">
                   <span>Track Order</span>
                   <ChevronRight className="w-5 h-5" />

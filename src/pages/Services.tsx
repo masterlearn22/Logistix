@@ -35,7 +35,7 @@ export const Services: React.FC = () => {
   };
 
   return (
-    <div className="pt-24 min-h-screen bg-brand-surface selection:bg-amber-500 selection:text-brand-dark">
+    <div className="min-h-screen bg-brand-surface selection:bg-amber-500 selection:text-brand-dark">
       
       {/* Hero Header */}
       <section className="bg-brand-dark text-white py-24 px-6 relative overflow-hidden">

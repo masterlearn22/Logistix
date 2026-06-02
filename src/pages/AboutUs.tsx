@@ -61,7 +61,7 @@ export const AboutUs: React.FC = () => {
   };
 
   return (
-    <div className="pt-24 min-h-screen bg-brand-surface selection:bg-amber-500 selection:text-brand-dark overflow-hidden">
+    <div className="min-h-screen bg-brand-surface selection:bg-amber-500 selection:text-brand-dark overflow-hidden">
       
       {/* Hero Storytelling Section */}
       <section className="bg-brand-dark text-white py-24 px-6 relative">

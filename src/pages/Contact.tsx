@@ -81,7 +81,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <div className="pt-24 min-h-screen bg-brand-surface selection:bg-amber-500 selection:text-brand-dark">
+    <div className="min-h-screen bg-brand-surface selection:bg-amber-500 selection:text-brand-dark">
       
       {/* Hero Section */}
       <section className="bg-brand-dark text-white py-24 px-6 relative overflow-hidden">
