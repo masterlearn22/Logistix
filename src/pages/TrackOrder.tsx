@@ -63,7 +63,7 @@ export const TrackOrder: React.FC = () => {
     <div className="min-h-screen bg-brand-surface selection:bg-amber-500 selection:text-brand-dark overflow-x-hidden">
       
       {/* Hero Search Section */}
-      <section className="bg-brand-dark text-white pt-32 pb-24 px-6 relative overflow-hidden">
+      <section className="bg-brand-dark text-white pb-24 px-6 relative overflow-hidden" style={{ paddingTop: '160px' }}>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1586528116311-ad8ed7c50800?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-luminosity"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/90 to-brand-surface"></div>
         
