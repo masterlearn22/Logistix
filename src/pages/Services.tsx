@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldCheck, Anchor, Plane, Truck, Zap, Globe, Package, Cpu, Thermometer, Leaf, Navigation, BarChart3, CloudRain, Lock, Unlock, Wind } from 'lucide-react';
-import { Button } from '../components/UI/Button';
+import { motion } from 'framer-motion';
+import { ShieldCheck, Anchor, Plane, Truck, Cpu, Thermometer, Leaf, Navigation, BarChart3, CloudRain, Lock, Unlock, Wind } from 'lucide-react';
 
 // Mock data for AI Optimizer
 const routes = {
@@ -40,7 +39,7 @@ export const Services: React.FC = () => {
       
       {/* Hero Header */}
       <section className="bg-brand-dark text-white py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1586528116311-ad8ed7c50800?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-20 mix-blend-luminosity"></div>
+        <div className="absolute inset-0 bg-[url('/images/services_hero_bg.png')] bg-cover bg-center opacity-20 mix-blend-luminosity"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/90 to-brand-surface"></div>
         
         <div className="container mx-auto text-center max-w-4xl relative z-10">
@@ -68,7 +67,7 @@ export const Services: React.FC = () => {
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               className="md:col-span-2 relative rounded-3xl overflow-hidden group bg-brand-dark text-white min-h-[400px]"
             >
-              <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&q=80&w=1200" alt="Sea Freight" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700" />
+              <img src="/images/sea_freight.png" alt="Sea Freight" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-10 w-full">
                 <Anchor className="w-12 h-12 text-amber-500 mb-4" />
@@ -86,7 +85,7 @@ export const Services: React.FC = () => {
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
               className="relative rounded-3xl overflow-hidden group bg-brand-dark text-white min-h-[400px]"
             >
-              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800" alt="Air Freight" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700" />
+              <img src="/images/air_freight.png" alt="Air Freight" className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 w-full">
                 <Plane className="w-10 h-10 text-amber-500 mb-4" />

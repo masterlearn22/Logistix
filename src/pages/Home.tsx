@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { Button } from '../components/UI/Button';
-import { Card } from '../components/UI/Card';
-import { Anchor, Plane, Truck, ArrowRight, Shield, Globe, Package, Zap, Hexagon, Box, Activity, Compass, Droplet, Feather, Flag, Key, LifeBuoy, Link, Map, Navigation, Radar, Mountain, Sun, Star, Search } from 'lucide-react';
+import { ArrowRight, Shield, Globe, Zap, Activity, Search } from 'lucide-react';
 
 const AnimatedNumber = ({ end, suffix = "", decimals = 0 }: { end: number, suffix?: string, decimals?: number }) => {
   const count = useMotionValue(0);
@@ -17,26 +16,10 @@ const AnimatedNumber = ({ end, suffix = "", decimals = 0 }: { end: number, suffi
 };
 
 export const Home: React.FC = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
-
-  const services = [
-    { title: 'Sea Freight', icon: <Anchor className="w-8 h-8 mb-4 text-brand-accent" />, desc: 'Global shipping solutions for large cargo.' },
-    { title: 'Air Freight', icon: <Plane className="w-8 h-8 mb-4 text-brand-accent" />, desc: 'Fast and reliable air transport globally.' },
-    { title: 'Land Transport', icon: <Truck className="w-8 h-8 mb-4 text-brand-accent" />, desc: 'Efficient trucking network across continents.' },
-  ];
 
   return (
     <div className="min-h-screen">
@@ -181,18 +164,18 @@ export const Home: React.FC = () => {
             {[
               { 
                 title: 'Sea Freight', 
-                frontImg: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&q=80&w=800', 
-                backImg: 'https://images.unsplash.com/photo-1577704908185-9e6b72d5bde2?auto=format&fit=crop&q=80&w=800' 
+                frontImg: '/images/sea_freight.png', 
+                backImg: '/images/sea_freight_warehouse.png' 
               },
               { 
                 title: 'Air Freight', 
-                frontImg: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800', 
-                backImg: 'https://images.unsplash.com/photo-1588612543594-82ce3bbce82d?auto=format&fit=crop&q=80&w=800' 
+                frontImg: '/images/air_freight.png', 
+                backImg: '/images/air_freight_loading.png' 
               },
               { 
                 title: 'Land Transport', 
-                frontImg: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800', 
-                backImg: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=800' 
+                frontImg: '/images/land_freight.png', 
+                backImg: '/images/land_freight_warehouse.png' 
               },
             ].map((service, index) => (
               <motion.div 

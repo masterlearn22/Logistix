@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Target, Flag, Shield, Users, Globe, ChevronRight, ChevronLeft, Maximize2, Award, Zap, Compass, Leaf } from 'lucide-react';
+import { Target, Shield, Users, Globe, ChevronRight, ChevronLeft, Maximize2, Award, Zap, Leaf } from 'lucide-react';
 
 const projects = [
   {
     id: 1,
     title: "Project Titan: The Andean Ascent",
     category: "Heavy Haul & Specialized",
-    image: "https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/project_titan.png",
     desc: "Transporting a 500-ton wind turbine across 3,000 kilometers of unforgiving terrain in the Andes. Our engineering team built custom multi-axle trailers to navigate tight mountain passes, completing the delivery 3 days ahead of schedule."
   },
   {
     id: 2,
     title: "Operation Cold Chain: Global Health",
     category: "Pharma & Perishables",
-    image: "https://images.unsplash.com/photo-1584308666744-2458b68832a8?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/project_coldchain.png",
     desc: "In response to a global health crisis, Logistix mobilized its IoT-enabled active cooling fleet to deliver 10 million critical vaccines across 15 countries maintaining strict 2°C to 8°C temperatures without a single excursion."
   },
   {
     id: 3,
     title: "Aero-Lift: Semiconductor Rescue",
     category: "Air Charter Solutions",
-    image: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/project_aerolift.png",
     desc: "When a major tech manufacturer faced a supply chain halt, we chartered a fleet of Boeing 747 freighters within 24 hours, flying rare earth components from Asia to Europe to keep production lines moving."
   }
 ];
@@ -65,7 +65,7 @@ export const AboutUs: React.FC = () => {
       
       {/* Hero Storytelling Section */}
       <section className="bg-brand-dark text-white py-24 px-6 relative">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-20 mix-blend-luminosity"></div>
+        <div className="absolute inset-0 bg-[url('/images/about_hero_bg.png')] bg-cover bg-center opacity-20 mix-blend-luminosity"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/90 to-brand-surface/20"></div>
         
         <div className="container mx-auto max-w-5xl relative z-10">
@@ -169,7 +169,7 @@ export const AboutUs: React.FC = () => {
 
             {/* Value 4: Innovation */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="md:col-span-2 bg-brand-dark rounded-3xl p-8 text-white flex items-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800')] bg-cover opacity-20"></div>
+              <div className="absolute inset-0 bg-[url('/images/innovation_bg.png')] bg-cover opacity-20"></div>
               <div className="relative z-10 w-full flex justify-between items-center">
                 <div>
                   <Zap className="w-8 h-8 text-amber-500 mb-4" />
