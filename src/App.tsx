@@ -8,6 +8,7 @@ import { Home } from './pages/Home';
 import { Services } from './pages/Services';
 import { AboutUs } from './pages/AboutUs';
 import { Contact } from './pages/Contact';
+import { TrackOrder } from './pages/TrackOrder';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -28,6 +29,7 @@ const AnimatedRoutes = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/track" element={<TrackOrder />} />
       </Routes>
     </AnimatePresence>
   );

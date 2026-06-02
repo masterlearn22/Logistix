@@ -70,10 +70,10 @@ export const Navbar: React.FC = () => {
 
         {/* Right Actions */}
         <div className="hidden md:flex items-center space-x-6">
-          <button className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all">
+          <Link to="/track" className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all group">
             <span>Track Order</span>
-            <ChevronRight className="w-4 h-4 text-amber-500" />
-          </button>
+            <ChevronRight className="w-4 h-4 text-amber-500 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -108,10 +108,10 @@ export const Navbar: React.FC = () => {
                 </Link>
               ))}
               <div className="pt-6 border-t border-white/10 flex flex-col space-y-4">
-                <button className="flex justify-center items-center space-x-2 bg-gradient-to-r from-amber-400 to-orange-500 text-brand-dark px-6 py-3 rounded-xl text-lg font-bold w-full shadow-[0_0_15px_rgba(245,158,11,0.4)]">
+                <Link to="/track" onClick={() => setIsMobileMenuOpen(false)} className="flex justify-center items-center space-x-2 bg-gradient-to-r from-amber-400 to-orange-500 text-brand-dark px-6 py-3 rounded-xl text-lg font-bold w-full shadow-[0_0_15px_rgba(245,158,11,0.4)]">
                   <span>Track Order</span>
                   <ChevronRight className="w-5 h-5" />
-                </button>
+                </Link>
               </div>
             </div>
           </motion.nav>
