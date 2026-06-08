@@ -28,7 +28,7 @@ export const Home: React.FC = () => {
         {/* Placeholder for Video/Image Background */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/hero-bg.png" 
+            src={import.meta.env.BASE_URL + "hero-bg.png"} 
             alt="Logistics Hero Background" 
             className="w-full h-full object-cover scale-105 animate-[pulse_20s_ease-in-out_infinite_alternate]"
           />
@@ -164,18 +164,18 @@ export const Home: React.FC = () => {
             {[
               { 
                 title: 'Sea Freight', 
-                frontImg: '/images/sea_freight.png', 
-                backImg: '/images/sea_freight_warehouse.png' 
+                frontImg: import.meta.env.BASE_URL + 'images/sea_freight.png', 
+                backImg: import.meta.env.BASE_URL + 'images/sea_freight_warehouse.png' 
               },
               { 
                 title: 'Air Freight', 
-                frontImg: '/images/air_freight.png', 
-                backImg: '/images/air_freight_loading.png' 
+                frontImg: import.meta.env.BASE_URL + 'images/air_freight.png', 
+                backImg: import.meta.env.BASE_URL + 'images/air_freight_loading.png' 
               },
               { 
                 title: 'Land Transport', 
-                frontImg: '/images/land_freight.png', 
-                backImg: '/images/land_freight_warehouse.png' 
+                frontImg: import.meta.env.BASE_URL + 'images/land_freight.png', 
+                backImg: import.meta.env.BASE_URL + 'images/land_freight_warehouse.png' 
               },
             ].map((service, index) => (
               <motion.div 
@@ -240,7 +240,7 @@ export const Home: React.FC = () => {
             ].map((company, i) => (
               <div key={`logo-original-1-${i}`} className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer px-6">
                 <img 
-                  src={`/logos/${company.name.replace(/\s+/g, '_').toLowerCase()}.png`} 
+                  src={`${import.meta.env.BASE_URL}logos/${company.name.replace(/\s+/g, '_').toLowerCase()}.png`} 
                   alt={company.name} 
                   title={company.name}
                   className="h-20 md:h-28 w-auto object-contain max-w-[200px] rounded-xl shadow-sm bg-white p-4" 
@@ -256,7 +256,7 @@ export const Home: React.FC = () => {
             ].map((company, i) => (
               <div key={`logo-dup-1-${i}`} className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer px-6">
                 <img 
-                  src={`/logos/${company.name.replace(/\s+/g, '_').toLowerCase()}.png`} 
+                  src={`${import.meta.env.BASE_URL}logos/${company.name.replace(/\s+/g, '_').toLowerCase()}.png`} 
                   alt={company.name} 
                   title={company.name}
                   className="h-20 md:h-28 w-auto object-contain max-w-[200px] rounded-xl shadow-sm bg-white p-4" 
@@ -275,7 +275,7 @@ export const Home: React.FC = () => {
             ].map((company, i) => (
               <div key={`logo-original-2-${i}`} className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer px-6">
                 <img 
-                  src={`/logos/${company.name.replace(/\s+/g, '_').toLowerCase()}.png`} 
+                  src={`${import.meta.env.BASE_URL}logos/${company.name.replace(/\s+/g, '_').toLowerCase()}.png`} 
                   alt={company.name} 
                   title={company.name}
                   className="h-20 md:h-28 w-auto object-contain max-w-[200px] rounded-xl shadow-sm bg-white p-4" 
@@ -291,7 +291,7 @@ export const Home: React.FC = () => {
             ].map((company, i) => (
               <div key={`logo-dup-2-${i}`} className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 cursor-pointer px-6">
                 <img 
-                  src={`/logos/${company.name.replace(/\s+/g, '_').toLowerCase()}.png`} 
+                  src={`${import.meta.env.BASE_URL}logos/${company.name.replace(/\s+/g, '_').toLowerCase()}.png`} 
                   alt={company.name} 
                   title={company.name}
                   className="h-20 md:h-28 w-auto object-contain max-w-[200px] rounded-xl shadow-sm bg-white p-4" 
